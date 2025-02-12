@@ -1,0 +1,109 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.calculator {
+    width: 260px; /* Fixed width */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Display area */
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-sizing: border-box; /* ensures padding does not affect width */
+}
+
+/* Style for the buttons grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 10px; /* space between buttons */
+}
+
+/* Button styles */
+.button {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ddd;
+}
+
+/* Special button styles */
+#equals {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#equals:hover {
+    background-color: #45a049;
+}
+
+#clear, #backspace {
+    background-color: #f44336;
+    color: white;
+}
+
+#clear:hover, #backspace:hover {
+    background-color: #d32f2f;
+}
+
+/* Adjustments for 0 and dot buttons */
+
+/* 0 Button - spans across two columns */
+#zero {
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 1.5rem;
+    padding: 20px;
+    grid-column: span 2; /* Make the 0 button span across two columns */
+}
+
+#zero:hover {
+    background-color: #ddd;
+}
+
+/* Decimal Button - slightly larger font size, keeps one column width */
+#decimal {
+    background-color: #f9a825;
+    color: white;
+    padding: 20px;
+    font-size: 1.8rem; /* Slightly larger font size for clarity */
+    grid-column: span 1; /* Keep it within one column width */
+}
+
+#decimal:hover {
+    background-color: #f57f17;
+}
+
+
+
